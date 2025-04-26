@@ -16,12 +16,22 @@
     </Window.Resources>
     <DockPanel>
         <DockPanel DockPanel.Dock="Top">
+            <Label DockPanel.Dock="Left" Margin="5" VerticalContentAlignment="Center" FontSize="15"
+FontWeight="Bold">Nickname:</Label>
+            <TextBox DockPanel.Dock="Left"
+             Name="nicknameBox"
+             Width="100"
+             Margin="5"
+             FontSize="15"
+             VerticalContentAlignment="Center" />
             <Label DockPanel.Dock="Left"
                    FontSize="15"
                    FontWeight="Bold"
                    Margin="10">Message:</Label>
+            
+            
             <Button DockPanel.Dock="Right"
-                    Foreground="Red" BorderBrush="Red" Background="Transparent">Leave</Button>
+                    Foreground="Red" BorderBrush="Red" Background="Transparent" Click="LeaveBtn">Leave</Button>
             <Button DockPanel.Dock="Right"
                     Foreground="Green" BorderBrush="Green" Background="Transparent" Click="JoinBtn">Join</Button>
             <Button DockPanel.Dock="Right" Click="SendBtn">Send</Button>
@@ -32,9 +42,10 @@
                      Margin="5,10"
                      VerticalContentAlignment="Center"
                      FontSize="15" KeyDown="msgTextBox_KeyDown"></TextBox>
+            
         </DockPanel>
         <TextBlock DockPanel.Dock="Top" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center">Chat</TextBlock>
-        <Button DockPanel.Dock="Bottom">Clear</Button>
+        <Button DockPanel.Dock="Bottom" Click="ClearBtn">Clear</Button>
         <ListBox ItemsSource="{Binding}" HorizontalContentAlignment="Stretch"   >
             <ListBox.ItemTemplate>
                 <DataTemplate>
